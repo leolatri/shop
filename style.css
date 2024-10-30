@@ -1,0 +1,227 @@
+@font-face {
+    font-family: 'Yandex Sans';
+    src: local('Yandex Sans Text Medium'), local('Yandex-Sans-Text-Medium'),
+        url('YandexSansText-Medium.woff2') format('woff2'),
+        url('YandexSansText-Medium.woff') format('woff'),
+        url('YandexSansText-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    overflow:hidden;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #EDF6FF;
+}
+
+.container_block1{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rack{
+    position: relative;
+    flex: none;
+}
+
+.container_block5{
+    width: 100%;
+    height: 32%;
+    position: absolute;
+    display: flex ;
+    align-items: end;
+    align-self: self-end;
+    z-index: 5;
+}
+
+.cart{
+    width: 65%;
+    height: 40%;
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    position: absolute;
+    margin: 0% 0 18% 27% ;
+    z-index: 2;
+    align-items: end;
+}
+
+.cart #product_3, .cart #product_4, .cart #product_1, 
+.cart #product_2, .cart #product_8, .cart #product_10 {
+    width: 18% !important;
+    position: absolute; 
+
+}
+
+.cart #product_6, .cart #product_7, 
+.cart #product_11{
+    width: 35% !important;
+    bottom: 0;
+    position: absolute; 
+    z-index: 2;
+}
+.cart #product_5 , .cart #product_9{
+    width: 29% !important;
+    bottom: 0;
+    position: absolute; 
+}
+#cart_1{
+    z-index: 4;
+    width: 100%;
+}
+
+.container_block2{
+    position: relative;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container_block3 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 65%; 
+    position: absolute;
+}
+.container_block4{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    height: 73%; 
+    position: absolute;
+    cursor: grab;
+}
+.container_products{
+    top: 10%;
+    bottom: 0;
+    display: grid;
+    flex: none;
+    position: absolute;
+    grid-template: repeat(3, 30%) / repeat(4, 25%);
+    align-items: end;
+    justify-items: center;
+    width: 70%;
+    height: 100%;
+    
+}
+
+
+.container_products img {
+    width: 70%;
+    height: auto; 
+}
+
+#product_3, #product_5,#product_9{
+    width: 100%;
+}
+
+#product_7,#product_11{
+    width: 130%;
+}
+#product_6{
+    grid-column: span 2;
+    margin-bottom: -11%;
+}
+
+.container_button{
+    width: 70%;
+    height: 10%;
+    position: absolute;
+    align-self: flex-end;
+    z-index: 10;
+    margin-bottom: 15%;
+    font-size: 1em;
+    font-family: 'Yandex Sans';
+    color: black;
+    background: #FCE000;
+    border-radius: 20px;
+    animation: appear 5s ;
+    transition: 1s;
+}
+.container_button:hover{
+    transform: scale(1.1);
+}
+
+@keyframes appear{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+
+@media  (min-width: 300px) {
+    .container_block1{
+        width: 100%;
+    }
+}
+
+@media  (min-width: 400px) {
+    .container_block1{
+        width: 100%;
+    }
+    .container_products{
+        width: 85%;
+    }
+}
+
+@media  (min-width: 700px) {
+    .container_block1{
+        width: 70%;
+    }
+    .container_products{
+        width: 82%;
+    }
+}
+
+@media  (min-width: 500px) {
+    .container_block1{
+        width: 65%;
+    }
+}
+
+@media  ((max-width: 345px) and (min-height: 800px)) {
+    .container_products{
+        width: 100%;
+    }
+}
+
+@media  (min-width: 1000px) {
+    .container_block1{
+        width: 30%;
+    }
+    .container_products{
+        width: 82%;
+    }
+}
+
+@media  ((min-width: 1000px) and (min-height: 1300px)) {
+    .container_block1{
+        width: 60%;
+    }
+}
